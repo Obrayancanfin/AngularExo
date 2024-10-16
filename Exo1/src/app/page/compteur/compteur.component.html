@@ -1,0 +1,8 @@
+<section class="flex items-center justify-center w-full h-screen">
+
+  <div class=" p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700  ">
+    <p class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Compteur: <span [class]="isPair ? pair : impair">{{compteur}}</span></p>
+    <button (click)="increase()" class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Augmenter compteur</button>
+    <button (click)="decrease()" class="rounded-md bg-red-700 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-red-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Diminuer compteur</button>
+  </div>
+</section>
