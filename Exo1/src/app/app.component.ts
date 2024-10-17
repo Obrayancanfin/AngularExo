@@ -4,11 +4,12 @@ import { CompteurComponent } from './page/compteur/compteur.component';
 import { NavbarComponent } from './component/navbar/navbar.component';
 import { SeriesComponent } from './page/series/series.component';
 import { OrderbyPipe } from './utils/orderby.pipe';
+import { LibrairieComponent } from './page/librairie/librairie.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet,CompteurComponent,NavbarComponent,SeriesComponent,OrderbyPipe],
+  imports: [RouterOutlet,CompteurComponent,NavbarComponent,SeriesComponent,OrderbyPipe,LibrairieComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

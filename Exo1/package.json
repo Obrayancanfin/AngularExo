@@ -2,9 +2,9 @@
   "name": "exo1",
   "version": "0.0.0",
   "scripts": {
-    "update_git": "ng build --base-href \"/AngularExo/\"\nnpx angular-cli-ghpages --dir=dist/Exo1/browser",
+    "update_git": "ng build --base-href \"/AngularExo/\" &&  npx angular-cli-ghpages --dir=dist/Exo1/browser",
     "ng": "ng",
-    "start": "ng serve",
+    "start": "npm run update_git && ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",

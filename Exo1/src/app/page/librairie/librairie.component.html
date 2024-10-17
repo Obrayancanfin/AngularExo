@@ -1,0 +1,23 @@
+<section class="flex items-center justify-center w-full h-screen">
+
+    <div class=" p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700  ">
+        <h1 class="text-white">Liste serie : </h1>  
+        <ul>
+            @if (listeLivre.length==0) {
+                <p class="text-white">La liste est vide</p>               
+            }@else {
+                @for (livre of listeLivre; track $index) {
+                    <li class="text-white">
+                        <h2 class="font-semibold text-slate-800 mb-3 text-white">{{ livre.title }} <span>{{ livre.isRead | emojiPipe }}</span></h2>
+                        <p class="text-slate-800 text-white mb-3">Auteur : {{ livre.author }}</p>
+                        <button (click)="toggleIsRead(livre)" class="bg-slate-800 hover:bg-slate-600 text-white py-2 px-2 font-semibold rounded text-white">{{ livre.isRead ? "Marquer comme non lu" : "Marquer comme lu" }}</button>
+                   </li>
+                }
+            }
+          </ul>
+
+ 
+    </div>
+  </section>
+
+
